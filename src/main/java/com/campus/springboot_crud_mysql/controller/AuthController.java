@@ -36,6 +36,7 @@ public class AuthController {
 	@PostMapping("/register")
 	public User saveUserController(@RequestBody User user) {
 		
+		
 		user.setPassword(passwordEncoder.encode(user.getPassword()));
 		
 		return userService.saveUserService(user);

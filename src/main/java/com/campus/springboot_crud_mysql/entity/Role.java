@@ -1,5 +1,7 @@
 package com.campus.springboot_crud_mysql.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -11,6 +13,7 @@ import lombok.Data;
 @Data
 @Table(name="roles")
 public class Role {
+	@JsonIgnore
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
